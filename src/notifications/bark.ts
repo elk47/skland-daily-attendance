@@ -1,5 +1,5 @@
 export async function bark(url: string, title: string, content: string) {
-  if (typeof url !== 'string' || !url.startsWith("http://") || !url.startsWith('https://')) {
+  if (typeof url !== 'string' || !url.startsWith("http://") && !url.startsWith('https://')) {
     console.error('Wrong type for Bark URL.')
     return -1
   }
